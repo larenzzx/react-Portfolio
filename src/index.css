@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .myLogo {
+  background-color: red;
+
+  animation-name: spin;
+  animation-duration: 3s
+}
+
+@keyframes spin {
+  0% {
+
+  }
+
+  100% {
+    transform: rotatet(360deg);
+  }
+} */
