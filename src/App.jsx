@@ -1,7 +1,4 @@
-// import Header from "./Header"
-// import Hero from "./Hero"
-// import { useState } from "react"
-// import Sample from './useStateSample'
+// import Sample from './components/useStateSample'
 
 import Hero from './components/Hero'
 import Header from './components/Header'

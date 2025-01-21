@@ -5,7 +5,7 @@ import { faFacebook, faGithub, faTwitter } from '@fortawesome/free-brands-svg-ic
 
 function Hero() {
     return (
-        <div className="hero bg-base-200 min-h-screen">
+        <div className="hero min-h-screen container">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img
                     src={myImg}
@@ -13,7 +13,7 @@ function Hero() {
                 />
                 <div className='text-center lg:text-left'>
                     <h1 className="text-5xl font-bold">Hello, <span className='text-primary'>I'm a developer</span></h1>
-                    <p className="py-6 w-[80%]">
+                    <p className="py-6 lg:w-[50%]">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                         quasi. In deleniti eaque aut repudiandae et a id nisi.
                     </p>

@@ -17,14 +17,10 @@ function Header() {
                     <a href="#">Home</a>
                 </li>
                 <li>
-                    {/* <a href="#">About</a> */}
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="">About</div>
-                        <ul tabIndex={0} className="dropdown-content menu bg-primary rounded-box z-[1] w-52 p-2 shadow">
-                            <li><a>1</a></li>
-                            <li><a>2</a></li>
-                        </ul>
-                    </div>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
                 </li>
                 <li>
                     <a href="#">Contact</a>
