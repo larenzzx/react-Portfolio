@@ -15,7 +15,17 @@ export default {
         '2xl': '6rem',
       },
     },
-    extend: {},
+    extend: {
+      animation: {
+        'leSnake': 'leSnake 1.5s ease-in-out infinite',
+      },
+      keyframes: {
+        leSnake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(1rem)' },
+        },
+      },
+    },
   },
   plugins: [
     require('daisyui'),
