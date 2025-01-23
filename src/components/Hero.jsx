@@ -6,8 +6,10 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
-import "../assets/cssanimation.css";
+
 import heroImg from "../assets/hero.jpg";
+
+import TypingAnimation from "./TypingAnimation";
 
 function Hero() {
   return (
@@ -40,17 +42,17 @@ function Hero() {
     >
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
-        <div className="max-w-md">
-          <h1 className="cssanimation typing mb-5 inline-block w-[320px] text-5xl font-bold">
+        <div className="max-w-md md:max-w-lg">
+          {/* <h1 className="cssanimation typing mb-5 inline-block w-[320px] text-5xl font-bold">
             Hi, <span className="text-secondary">I'm Larenz</span>
+          </h1> */}
+          <h1 className="mb-5 flex items-center justify-center gap-x-2 text-2xl font-bold md:text-5xl">
+            Hi, <TypingAnimation />
           </h1>
-          <p className="mb-5 font-medium">
-            A passionate{" "}
-            <span className="text-primary">Frontend Developer</span> creating
-            intuitive and dynamic user experiences. Currently expanding my
-            expertise into{" "}
-            <span className="text-primary">Backend Development</span> to build
-            full-stack solutions.
+          {/* <TypingAnimation /> */}
+          <p className="mb-5 text-base font-medium md:text-lg">
+            Actively honing my skills to become a reliable <br />{" "}
+            <span className="text-primary">Full-Stack Web Developer</span>.
           </p>
           <div className="space-x-4">
             <a
