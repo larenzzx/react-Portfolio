@@ -7,8 +7,8 @@ const TypingAnimation = () => {
   const [isDeleting, setIsDeleting] = useState(false); // Typing or deleting state
   const [text, setText] = useState(""); // Text to display
   const typingSpeed = 100; // Speed of typing
-  const erasingSpeed = 50; // Speed of erasing
-  const delayBetweenTexts = 1000; // Pause before switching texts
+  const erasingSpeed = 100; // Speed of erasing
+  const delayBetweenTexts = 200; // Pause before switching texts
 
   useEffect(() => {
     const currentText = texts[index];
