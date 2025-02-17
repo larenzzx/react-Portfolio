@@ -50,11 +50,11 @@ function Hero() {
             Hi, <TypingAnimation />
           </h1>
           {/* <TypingAnimation /> */}
-          <p className="mb-5 text-base font-medium md:text-lg">
+          {/* <p className="mb-5 text-base font-medium md:text-lg">
             Actively honing my skills to become a reliable <br />{" "}
             <span className="text-primary">Full-Stack Web Developer</span>.
-          </p>
-          <div className="space-x-4">
+          </p> */}
+          {/* <div className="space-x-4">
             <a
               href="https://www.facebook.com/marklarenz.tabotabo"
               target="_blank"
@@ -75,7 +75,7 @@ function Hero() {
               icon={faTwitter}
               className="animate-bounce text-2xl text-primary"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

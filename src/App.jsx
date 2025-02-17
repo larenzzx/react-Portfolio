@@ -2,8 +2,9 @@
 
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // for routing to another page
 
-import Hero from './components/Hero'
 import Header from './components/Header'
+import Hero from './components/Hero'
+import About from './components/About'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <>
       <Header />
       <Hero />
+      <About />
     </>
 
     // sample on redirecting to another page
