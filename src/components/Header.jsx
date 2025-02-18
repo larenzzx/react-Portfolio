@@ -62,17 +62,7 @@ function Header() {
               <a>Skills</a>
             </li>
             <li>
-              <details>
-                <summary>Projects</summary>
-                <ul className="z-50 bg-gray-500 bg-opacity-10 bg-clip-padding p-2 backdrop-blur backdrop-contrast-100 backdrop-saturate-100 backdrop-filter">
-                  <li>
-                    <a>Project 1</a>
-                  </li>
-                  <li>
-                    <a>Project 2</a>
-                  </li>
-                </ul>
-              </details>
+              <a>Projects</a>
             </li>
             <li>
               <a>Contact</a>
