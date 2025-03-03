@@ -6,18 +6,20 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+
+
 import Button from "./Button";
+
+// lahi nga way pag call sa component if walay export default. if 'export const arrow function ra'
+import { SectionTitle } from './SectionTitle';
 
 const About = () => {
   return (
     <>
       <div className="container min-h-screen">
-        <div
-          id="about"
-          className="grid place-items-center pb-6 pt-24 text-5xl font-bold text-secondary"
-        >
-          <h1>About Me</h1>
-        </div>
+        
+        <SectionTitle id='about' title='About Me' />
+        
         <div className="hero">
           <div className="hero-content flex-col gap-12 lg:flex-row">
             <img src={myImg} className="max-w-xs rounded-lg shadow-2xl" />

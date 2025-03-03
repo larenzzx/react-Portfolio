@@ -31,18 +31,10 @@ function Header() {
                 <a href="#about">About</a>
               </li>
               <li>
-                <a>Skills</a>
+                <a href="#skills">Skills</a>
               </li>
               <li>
                 <a>Projects</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Project 1</a>
-                  </li>
-                  <li>
-                    <a>Project 2</a>
-                  </li>
-                </ul>
               </li>
               <li>
                 <a>Contact</a>
@@ -59,7 +51,7 @@ function Header() {
               <a href="#about">About</a>
             </li>
             <li>
-              <a>Skills</a>
+              <a href="#skills">Skills</a>
             </li>
             <li>
               <a>Projects</a>
