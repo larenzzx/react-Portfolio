@@ -35,14 +35,6 @@ function Header() {
               </li>
               <li>
                 <a>Projects</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Project 1</a>
-                  </li>
-                  <li>
-                    <a>Project 2</a>
-                  </li>
-                </ul>
               </li>
               <li>
                 <a>Contact</a>
