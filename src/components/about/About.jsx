@@ -12,18 +12,23 @@ import Button from "../Button";
 // lahi nga way pag call sa component if walay export default. if 'export const arrow function ra'
 import { SectionTitle } from "../SectionTitle";
 
-
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// scroll animation
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const About = () => {
   useEffect(() => {
     AOS.init();
-  }, [])
+  }, []);
   return (
     <>
-      <div className="container min-h-screen" data-aos="fade-right">
+      <div
+        className="container min-h-screen"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
         <SectionTitle id="about" title="About Me" />
 
         <div className="hero">
