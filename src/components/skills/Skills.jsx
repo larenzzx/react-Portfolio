@@ -34,7 +34,7 @@ export const Skills = () => {
       <div className="mt-8 text-center">
         <div className="mb-8 text-center">
           <SkillInfo info="Frontend Development" />
-          <div className="flex flex-wrap justify-center gap-4 py-6">
+          <div className="flex flex-wrap justify-center gap-6 py-6">
             <SkillLogo logos={htmlLogo} tooltip="HTML" />
             <SkillLogo logos={cssLogo} tooltip="CSS" />
             <SkillLogo logos={jsLogo} tooltip="JavaScript" />
@@ -45,7 +45,7 @@ export const Skills = () => {
             <SkillLogo logos={chartLogo} tooltip="chartJS" />
             <SkillLogo logos={dataTable} tooltip="DataTablesJS" />
             <SkillLogo logos={swipeLogo} tooltip="SwiperJS" />
-            <SkillLogo logos={sweetLogo} tooltip="sweetalert2" />
+            {/* <SkillLogo logos={sweetLogo} tooltip="sweetalert2" /> */}
           </div>
         </div>
 
