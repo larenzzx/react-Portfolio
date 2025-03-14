@@ -12,6 +12,9 @@ import Button from "../Button";
 // lahi nga way pag call sa component if walay export default. if 'export const arrow function ra'
 import { SectionTitle } from "../SectionTitle";
 
+
+import AOS from 'aos';
+
 const About = () => {
   return (
     <>
