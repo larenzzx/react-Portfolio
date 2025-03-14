@@ -14,11 +14,16 @@ import { SectionTitle } from "../SectionTitle";
 
 
 import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <>
-      <div className="container min-h-screen">
+      <div className="container min-h-screen" data-aos="fade-right">
         <SectionTitle id="about" title="About Me" />
 
         <div className="hero">
