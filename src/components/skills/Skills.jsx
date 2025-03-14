@@ -38,13 +38,13 @@ export const Skills = () => {
             <SkillLogo logos={htmlLogo} tooltip="HTML" />
             <SkillLogo logos={cssLogo} tooltip="CSS" />
             <SkillLogo logos={jsLogo} tooltip="JavaScript" />
+            <SkillLogo logos={chartLogo} tooltip="chartJS" />
+            <SkillLogo logos={swipeLogo} tooltip="SwiperJS" />
+            <SkillLogo logos={dataTable} tooltip="DataTablesJS" />
             <SkillLogo logos={tailwindLogo} tooltip="TailwindCSS" />
             <SkillLogo logos={reactLogo} tooltip="ReactJS" />
-            <SkillLogo logos={daisyLogo} tooltip="daisyUI" />
             <SkillLogo logos={headlessLogo} tooltip="HeadlessUI" />
-            <SkillLogo logos={chartLogo} tooltip="chartJS" />
-            <SkillLogo logos={dataTable} tooltip="DataTablesJS" />
-            <SkillLogo logos={swipeLogo} tooltip="SwiperJS" />
+            <SkillLogo logos={daisyLogo} tooltip="daisyUI" />
             {/* <SkillLogo logos={sweetLogo} tooltip="sweetalert2" /> */}
           </div>
         </div>
@@ -62,7 +62,7 @@ export const Skills = () => {
         <div className="text-center">
           <SkillInfo info="Version Control & Collaboration" />
           <div className="flex flex-wrap justify-center gap-4 py-6">
-            <SkillLogo logos={gitLogo} tooltip="GIT" />
+            <SkillLogo logos={gitLogo} tooltip="Git" />
             <SkillLogo logos={githubLogo} tooltip="GitHub" />
           </div>
         </div>
