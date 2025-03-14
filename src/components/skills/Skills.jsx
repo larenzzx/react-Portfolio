@@ -31,7 +31,7 @@ export const Skills = () => {
     <div className="container min-h-screen">
       <SectionTitle id="skills" title="Skills" />
 
-      <div className="mt-8 text-center">
+      <div className="mt-4 text-center rounded-2xl bg-primary bg-opacity-5 shadow-lg shadow-[rgba(255,255,255,0.1)] backdrop-blur-md p-4">
         <div className="mb-8 text-center">
           <SkillInfo info="Frontend Development" />
           <div className="flex flex-wrap justify-center gap-6 py-6">
