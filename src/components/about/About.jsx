@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import myImg from "../assets/me.jpg";
+import myImg from "../../assets/me.jpg";
 import {
   faFacebook,
   faGithub,
@@ -7,10 +7,10 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
-import Button from "./Button";
+import Button from "../Button";
 
 // lahi nga way pag call sa component if walay export default. if 'export const arrow function ra'
-import { SectionTitle } from "./SectionTitle";
+import { SectionTitle } from "../SectionTitle";
 
 const About = () => {
   return (
@@ -25,7 +25,9 @@ const About = () => {
               className="max-w-60 rounded-lg shadow-2xl sm:max-w-xs"
             />
             <div className="text-center lg:text-left">
-              <h1 className="text-3xl sm:text-4xl font-semibold">Mark Larenz Tabotabo</h1>
+              <h1 className="text-3xl font-semibold sm:text-4xl">
+                Mark Larenz Tabotabo
+              </h1>
               <p className="py-6 text-sm sm:text-base">
                 I am a passionate web developer with a strong focus on{" "}
                 <span className="text-primary">frontend development</span>,

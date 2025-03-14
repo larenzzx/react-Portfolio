@@ -1,8 +1,8 @@
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
+import Hero from "./components/hero/Hero";
+import About from "./components/about/About";
 
-import { Skills } from './components/Skills';
+import { Skills } from "./components/skills/Skills";
 
 function App() {
   return (
