@@ -49,7 +49,7 @@ export const Skills = () => {
           </div>
         </div>
 
-        <div className="text-center">
+        <div className="mb-8 text-center">
           <SkillInfo info="Backend Development" />
           <div className="flex flex-wrap justify-center gap-4 py-6">
             <SkillLogo logos={phpLogo} tooltip="PHP" />
