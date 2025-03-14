@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
       <div className="navbar fixed z-10 bg-gray-500 bg-opacity-10 bg-clip-padding backdrop-blur backdrop-contrast-100 backdrop-saturate-100 backdrop-filter">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden" onClick={toggleMenu}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -23,23 +29,26 @@ function Header() {
                 />
               </svg>
             </div>
-            <ul
-              tabIndex={0}
-              className="menu dropdown-content menu-sm z-50 mt-3 w-52 rounded-box bg-gray-500 bg-opacity-10 bg-clip-padding p-2 shadow backdrop-blur backdrop-contrast-100 backdrop-saturate-100 backdrop-filter"
-            >
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a>Skills</a>
-              </li>
-              <li>
-                <a>Projects</a>
-              </li>
-              <li>
-                <a>Contact</a>
-              </li>
-            </ul>
+            {isMenuOpen && (
+
+              <ul
+                tabIndex={0}
+                className="menu dropdown-content menu-sm z-50 mt-3 w-52 rounded-box bg-gray-900 bg-clip-padding p-2 shadow"
+              >
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#skills">Skills</a>
+                </li>
+                <li>
+                  <a>Projects</a>
+                </li>
+                <li>
+                  <a>Contact</a>
+                </li>
+              </ul>
+            )}
           </div>
           <a href="#" className="btn btn-ghost animate-pulse text-xl font-bold">
             larenzz
@@ -51,7 +60,7 @@ function Header() {
               <a href="#about">About</a>
             </li>
             <li>
-              <a>Skills</a>
+              <a href="#skills">Skills</a>
             </li>
             <li>
               <a>Projects</a>
