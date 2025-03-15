@@ -31,7 +31,7 @@ export const Skills = () => {
     <div className="container min-h-screen">
       <SectionTitle id="skills" title="Skills" />
 
-      <div className="mt-4 rounded-2xl bg-primary bg-opacity-5 p-4 text-center shadow-lg shadow-[rgba(255,255,255,0.1)] backdrop-blur-md">
+      <div className="mt-4 rounded-2xl bg-gray-800 bg-opacity-10 p-4 text-center shadow-lg shadow-[rgba(255,255,255,0.1)] backdrop-blur-md">
         <div className="mb-8 text-center">
           <SkillInfo info="Frontend Development" />
           <div className="flex flex-wrap justify-center gap-4 py-6 md:gap-6">
@@ -39,13 +39,13 @@ export const Skills = () => {
             <SkillLogo logos={cssLogo} tooltip="CSS" />
             <SkillLogo logos={jsLogo} tooltip="JavaScript" />
             <SkillLogo logos={chartLogo} tooltip="chartJS" />
+            <SkillLogo logos={sweetLogo} tooltip="sweetalert2" />
             <SkillLogo logos={swipeLogo} tooltip="SwiperJS" />
             <SkillLogo logos={dataTable} tooltip="DataTablesJS" />
             <SkillLogo logos={tailwindLogo} tooltip="TailwindCSS" />
             <SkillLogo logos={reactLogo} tooltip="ReactJS" />
             <SkillLogo logos={headlessLogo} tooltip="HeadlessUI" />
             <SkillLogo logos={daisyLogo} tooltip="daisyUI" />
-            {/* <SkillLogo logos={sweetLogo} tooltip="sweetalert2" /> */}
           </div>
         </div>
 
