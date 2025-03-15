@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import myImg from "../../assets/me.jpg";
 import {
@@ -13,12 +14,35 @@ import Button from "../Button";
 import { SectionTitle } from "../SectionTitle";
 
 const About = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutSection = document.getElementById("about");
+      if (!aboutSection) return;
+
+      const rect = aboutSection.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight * 0.75 && rect.bottom > 0;
+
+      if (isVisible) {
+        setAnimate(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check on initial render
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="container min-h-screen">
         <SectionTitle id="about" title="About Me" />
 
-        <div className="hero">
+        <div className={`hero ${animate ? "motion-preset-bounce motion-duration-1000" : ""}`}>
           <div className="hero-content flex-col gap-12 lg:flex-row">
             <img
               src={myImg}

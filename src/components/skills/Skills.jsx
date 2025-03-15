@@ -1,4 +1,5 @@
 import { SectionTitle } from "../SectionTitle";
+import { useEffect, useState } from "react";
 
 // frontend logos
 import htmlLogo from "../../assets/html5.svg";
@@ -27,6 +28,29 @@ import { SkillInfo } from "./Skill-info";
 import { SkillLogo } from "./Skill-logo";
 
 export const Skills = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const skillSection = document.getElementById("skills");
+      if (!skillSection) return;
+
+      const rect = skillSection.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight * 0.75 && rect.bottom > 0;
+
+      if (isVisible) {
+        setAnimate(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check on initial render
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="container min-h-screen">
       <SectionTitle id="skills" title="Skills" />
@@ -34,7 +58,7 @@ export const Skills = () => {
       <div className="mt-4 rounded-2xl bg-gray-800 bg-opacity-10 p-4 text-center shadow-lg shadow-[rgba(255,255,255,0.1)] backdrop-blur-md">
         <div className="mb-8 text-center">
           <SkillInfo info="Frontend Development" />
-          <div className="flex flex-wrap justify-center gap-4 py-6 md:gap-6">
+          <div className={`flex flex-wrap justify-center gap-4 py-6 md:gap-6 ${animate ? "motion-scale-in-[0.5] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur" : ""}`}>
             <SkillLogo logos={htmlLogo} tooltip="HTML" />
             <SkillLogo logos={cssLogo} tooltip="CSS" />
             <SkillLogo logos={jsLogo} tooltip="JavaScript" />
@@ -51,7 +75,7 @@ export const Skills = () => {
 
         <div className="mb-8 text-center">
           <SkillInfo info="Backend Development" />
-          <div className="flex flex-wrap justify-center gap-4 py-6">
+          <div className={`flex flex-wrap justify-center gap-4 py-6 md:gap-6 ${animate ? "motion-scale-in-[0.5] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur" : ""}`}>
             <SkillLogo logos={phpLogo} tooltip="PHP" />
             <SkillLogo logos={pythonLogo} tooltip="python" />
             <SkillLogo logos={sqlLogo} tooltip="MySQL" />
@@ -61,7 +85,7 @@ export const Skills = () => {
 
         <div className="text-center">
           <SkillInfo info="Version Control & Collaboration" />
-          <div className="flex flex-wrap justify-center gap-4 py-6">
+          <div className={`flex flex-wrap justify-center gap-4 py-6 md:gap-6 ${animate ? "motion-scale-in-[0.5] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur" : ""}`}>
             <SkillLogo logos={gitLogo} tooltip="Git" />
             <SkillLogo logos={githubLogo} tooltip="GitHub" />
           </div>
