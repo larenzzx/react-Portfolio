@@ -1,4 +1,5 @@
 import { SectionTitle } from "../SectionTitle";
+import { ObserverProvider } from "../ObserverProvider";
 
 // frontend logos
 import htmlLogo from "../../assets/html5.svg";
@@ -32,40 +33,42 @@ export const Skills = () => {
       <SectionTitle id="skills" title="Skills" />
 
       <div className="mt-4 rounded-2xl bg-gray-800 bg-opacity-10 p-4 text-center shadow-lg shadow-[rgba(255,255,255,0.1)] backdrop-blur-md">
-        <div className="mb-8 text-center">
-          <SkillInfo info="Frontend Development" />
-          <div className="flex flex-wrap justify-center gap-4 py-6 md:gap-6">
-            <SkillLogo logos={htmlLogo} tooltip="HTML" />
-            <SkillLogo logos={cssLogo} tooltip="CSS" />
-            <SkillLogo logos={jsLogo} tooltip="JavaScript" />
-            <SkillLogo logos={chartLogo} tooltip="chartJS" />
-            <SkillLogo logos={sweetLogo} tooltip="sweetalert2" />
-            <SkillLogo logos={swipeLogo} tooltip="SwiperJS" />
-            <SkillLogo logos={dataTable} tooltip="DataTablesJS" />
-            <SkillLogo logos={tailwindLogo} tooltip="TailwindCSS" />
-            <SkillLogo logos={reactLogo} tooltip="ReactJS" />
-            <SkillLogo logos={headlessLogo} tooltip="HeadlessUI" />
-            <SkillLogo logos={daisyLogo} tooltip="daisyUI" />
+        <ObserverProvider>
+          <div className="mb-8 text-center">
+            <SkillInfo info="Frontend Development" />
+            <div className="intersect-once intersect:motion-preset-slide-right-lg intersect:motion-duration-1500 intersect:motion-delay-500 intersect:motion-ease-bounce flex flex-wrap justify-center gap-4 py-6 md:gap-6">
+              <SkillLogo logos={htmlLogo} tooltip="HTML" />
+              <SkillLogo logos={cssLogo} tooltip="CSS" />
+              <SkillLogo logos={jsLogo} tooltip="JavaScript" />
+              <SkillLogo logos={chartLogo} tooltip="chartJS" />
+              <SkillLogo logos={sweetLogo} tooltip="sweetalert2" />
+              <SkillLogo logos={swipeLogo} tooltip="SwiperJS" />
+              <SkillLogo logos={dataTable} tooltip="DataTablesJS" />
+              <SkillLogo logos={tailwindLogo} tooltip="TailwindCSS" />
+              <SkillLogo logos={reactLogo} tooltip="ReactJS" />
+              <SkillLogo logos={headlessLogo} tooltip="HeadlessUI" />
+              <SkillLogo logos={daisyLogo} tooltip="daisyUI" />
+            </div>
           </div>
-        </div>
 
-        <div className="mb-8 text-center">
-          <SkillInfo info="Backend Development" />
-          <div className="flex flex-wrap justify-center gap-4 py-6">
-            <SkillLogo logos={phpLogo} tooltip="PHP" />
-            <SkillLogo logos={pythonLogo} tooltip="python" />
-            <SkillLogo logos={sqlLogo} tooltip="MySQL" />
-            <SkillLogo logos={djangoLogo} tooltip="django" />
+          <div className="mb-8 text-center">
+            <SkillInfo info="Backend Development" />
+            <div className="intersect-once intersect:motion-preset-slide-right-lg intersect:motion-duration-1500 intersect:motion-delay-500 intersect:motion-ease-bounce flex flex-wrap justify-center gap-4 py-6 md:gap-6">
+              <SkillLogo logos={phpLogo} tooltip="PHP" />
+              <SkillLogo logos={pythonLogo} tooltip="python" />
+              <SkillLogo logos={sqlLogo} tooltip="MySQL" />
+              <SkillLogo logos={djangoLogo} tooltip="django" />
+            </div>
           </div>
-        </div>
 
-        <div className="text-center">
-          <SkillInfo info="Version Control & Collaboration" />
-          <div className="flex flex-wrap justify-center gap-4 py-6">
-            <SkillLogo logos={gitLogo} tooltip="Git" />
-            <SkillLogo logos={githubLogo} tooltip="GitHub" />
+          <div className="text-center">
+            <SkillInfo info="Version Control & Collaboration" />
+            <div className="intersect-once intersect:motion-preset-slide-right-lg intersect:motion-duration-1500 intersect:motion-delay-500 intersect:motion-ease-bounce flex flex-wrap justify-center gap-4 py-6 md:gap-6">
+              <SkillLogo logos={gitLogo} tooltip="Git" />
+              <SkillLogo logos={githubLogo} tooltip="GitHub" />
+            </div>
           </div>
-        </div>
+        </ObserverProvider>
       </div>
     </div>
   );
