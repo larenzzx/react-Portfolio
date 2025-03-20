@@ -10,20 +10,22 @@ export const ProjectCard = ({
   projectRole,
   link,
   liveView,
-  liveLink
+  liveLink,
 }) => {
   return (
     <ObserverProvider>
-      <div className="card glass w-96 intersect-once intersect:motion-translate-y-in-100 intersect:motion-duration-[2s] intersect:motion-ease-spring-smooth">
+      <div className="intersect-once card glass w-96 intersect:motion-translate-y-in-100 intersect:motion-duration-[2s] intersect:motion-ease-spring-smooth">
         <figure>
           <img className="h-56 w-96 object-cover" src={projectImg} alt="" />
         </figure>
         <div className="card-body">
-          <p className="badge badge-secondary">{projectDetail}</p>
+          <p className="badge badge-secondary max-h-5 min-w-36">
+            {projectDetail}
+          </p>
           <h2 className="card-title text-sm sm:text-base md:text-xl">
             {projectTitle}
           </h2>
-          <p className="text-xs sm:text-sm md:text-base">Role: {projectRole}</p>
+          <p className="text-xs sm:text-sm md:text-base">{projectRole}</p>
           <div className="card-actions justify-end">
             <a
               href={link}
