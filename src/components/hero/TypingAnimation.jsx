@@ -8,19 +8,19 @@ const TypingAnimation = () => {
   const [text, setText] = useState("");
   const typingSpeed = 100;
   const erasingSpeed = 50;
-  const delayBetweenTexts = 1000; // Delay before starting to delete
+  const delayBetweenTexts = 1000;
 
   useEffect(() => {
     const currentText = texts[index];
 
     if (!isDeleting && charIndex === currentText.length) {
-      // Wait before deleting
+      // wait before deleting
       const timeout = setTimeout(() => setIsDeleting(true), delayBetweenTexts);
       return () => clearTimeout(timeout);
     }
 
     if (isDeleting && charIndex === 0) {
-      // Move to the next word
+      // move to the next word
       setIsDeleting(false);
       setIndex((prev) => (prev + 1) % texts.length);
     }
@@ -30,7 +30,7 @@ const TypingAnimation = () => {
       setCharIndex((prev) => prev + (isDeleting ? -1 : 1));
     }, isDeleting ? erasingSpeed : typingSpeed);
 
-    return () => clearTimeout(timeout); // Cleanup function to avoid stacking timeouts
+    return () => clearTimeout(timeout); // function to avoid stacking timeouts
   }, [charIndex, isDeleting, index]);
 
   return (
