@@ -8,7 +8,9 @@ export const ProjectCard = ({
   projectDetail,
   projectTitle,
   projectRole,
+  link,
   liveView,
+  liveLink
 }) => {
   return (
     <ObserverProvider>
@@ -24,14 +26,14 @@ export const ProjectCard = ({
           <p className="text-xs sm:text-sm md:text-base">Role: {projectRole}</p>
           <div className="card-actions justify-end">
             <a
-              href="#"
+              href={link}
               className="badge badge-outline flex items-center justify-center gap-x-1 py-3"
             >
               <FontAwesomeIcon icon={faGithub} />
               GitHub
             </a>
 
-            <LiveView isLiveView={liveView} />
+            <LiveView isLiveView={liveView} links={liveLink} />
           </div>
         </div>
       </div>
