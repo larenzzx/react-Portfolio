@@ -11,7 +11,7 @@ export const Projects = () => {
     <div className="container min-h-screen">
       <SectionTitle id="projects" title="Projects" />
 
-      <div className="flex flex-wrap justify-center gap-4 py-6 md:gap-6">
+      <div className="flex flex-wrap justify-center gap-6 py-6 md:gap-8">
     
         <ProjectCard projectImg={heroImg} projectDetail={"Capstone Project"} projectTitle={"One Zamboanga: Evacuation Center Management System"} projectRole={"Full-stack Developer"} liveView={false}  />
 
