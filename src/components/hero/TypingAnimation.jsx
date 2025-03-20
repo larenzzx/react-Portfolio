@@ -7,33 +7,31 @@ const TypingAnimation = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const typingSpeed = 100;
-  const erasingSpeed = 100;
-  const delayBetweenTexts = 200;
+  const erasingSpeed = 50;
+  const delayBetweenTexts = 1000; // Delay before starting to delete
 
   useEffect(() => {
     const currentText = texts[index];
 
-    if (isDeleting) {
-      setTimeout(() => {
-        setText(currentText.substring(0, charIndex - 1));
-        setCharIndex((prev) => prev - 1);
-      }, erasingSpeed);
-    } else {
-      setTimeout(() => {
-        setText(currentText.substring(0, charIndex + 1));
-        setCharIndex((prev) => prev + 1);
-      }, typingSpeed);
-    }
-
     if (!isDeleting && charIndex === currentText.length) {
-      setTimeout(() => setIsDeleting(true), delayBetweenTexts);
+      // Wait before deleting
+      const timeout = setTimeout(() => setIsDeleting(true), delayBetweenTexts);
+      return () => clearTimeout(timeout);
     }
 
     if (isDeleting && charIndex === 0) {
+      // Move to the next word
       setIsDeleting(false);
       setIndex((prev) => (prev + 1) % texts.length);
     }
-  }, [charIndex, isDeleting, index, texts]);
+
+    const timeout = setTimeout(() => {
+      setText(currentText.substring(0, charIndex + (isDeleting ? -1 : 1)));
+      setCharIndex((prev) => prev + (isDeleting ? -1 : 1));
+    }, isDeleting ? erasingSpeed : typingSpeed);
+
+    return () => clearTimeout(timeout); // Cleanup function to avoid stacking timeouts
+  }, [charIndex, isDeleting, index]);
 
   return (
     <div className="flex items-center bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
