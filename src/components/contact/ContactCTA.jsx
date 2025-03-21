@@ -61,7 +61,7 @@ export const ContactMe = () => {
           required
         />
         <input
-          type="text"
+          type="email"
           className="input input-bordered w-full bg-gray-400 bg-opacity-10 bg-clip-padding"
           name="from_email"
           placeholder="Email"
