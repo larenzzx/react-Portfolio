@@ -1,11 +1,11 @@
 import { SectionTitle } from "../SectionTitle";
-import { InputBox } from "./inputs";
+import { ContactMe } from "./ContactCTA";
 
 export const Contact = () => {
   return (
     <div className="container min-h-screen">
       <SectionTitle id="contact" title="Contact Me" />
-      <InputBox />
+      <ContactMe />
     </div>
   );
 };
