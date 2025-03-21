@@ -45,7 +45,7 @@ export const Projects = () => {
 
         <ProjectCard
           projectImg={ml}
-          projectDetail={"Machine Learning Project"}
+          projectDetail={"IT ELECTIVE 3 PROJECT"}
           projectTitle={"Sleepwell Hub"}
           projectRole={"Role: Back-end Developer"}
           link={"https://github.com/larenzzx/Sleepwell-Hub"}
@@ -54,7 +54,7 @@ export const Projects = () => {
 
         <ProjectCard
           projectImg={ecom}
-          projectDetail={"IT ELECTIVE 3 PROJECT"}
+          projectDetail={"IT ELECTIVE 2 PROJECT"}
           projectTitle={"ECOVARIETY"}
           projectRole={"Role: Front-end Developer"}
           link={"https://github.com/larenzzx/Ecovariety"}
@@ -63,7 +63,7 @@ export const Projects = () => {
 
         <ProjectCard
           projectImg={crimson}
-          projectDetail={"???"}
+          projectDetail={"Advance Database Project"}
           projectTitle={"CrimsonQuest"}
           projectRole={"Role: Full-stack Developer"}
           link={"https://github.com/larenzzx/CrimsonQuest"}
