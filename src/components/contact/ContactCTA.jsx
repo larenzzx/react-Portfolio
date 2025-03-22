@@ -1,6 +1,14 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import { Mail } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faGithub,
+  faLinkedin,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 export const ContactMe = () => {
   const form = useRef();
@@ -29,18 +37,26 @@ export const ContactMe = () => {
         () => {
           console.log("SUCCESS!");
           Swal.fire({
+            toast: true,
+            position: "top-end",
             icon: "success",
-            title: "Message sent",
-            text: "Thank you for reaching out to me, will get back to you soon!",
+            title: "Message sent successfully!",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
           });
           form.current.reset();
         },
         (error) => {
           console.log("FAILED...", error.text);
           Swal.fire({
+            toast: true,
+            position: "top-end",
             icon: "error",
-            title: "Failed to Send!",
-            text: "Something went wrong. Please try again.",
+            title: "Failed to send. Try again.",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
           });
         },
       );
@@ -81,6 +97,23 @@ export const ContactMe = () => {
         className="btn btn-primary w-full"
         value="Send message"
       />
+
+      <div className="divider text-sm">OR REACH ME AT</div>
+
+      <div className="flex items-center justify-center gap-4">
+        <a href="mailto:marklarenztabotabo@gmail.com">
+          <Mail size={24} />
+        </a>
+        <a href="https://www.facebook.com/share/1BtPFnE8wm/?mibextid=wwXIfr" className="text-xl">
+          <FontAwesomeIcon icon={faFacebook} />
+        </a>
+        <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmark-larenz-tabotabo-681216346%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dios_app&h=AT2cGGHZ4TPk14HKpse10IUrdxA6vst8idrh0JxVZUbOiTPNR3YMoIV6B1YUdzPssmV4qb5Xvo8qcKcDnT9fjdS06XeYCQOmfCoP6Qj3AtcWpB3fUYzq723Y_IjsX7uDVxflj1I5LMtpw2avbHLOQQ" className="text-xl">
+        <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+        <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fx.com%2Flarenzz15%3Fs%3D11&h=AT2cGGHZ4TPk14HKpse10IUrdxA6vst8idrh0JxVZUbOiTPNR3YMoIV6B1YUdzPssmV4qb5Xvo8qcKcDnT9fjdS06XeYCQOmfCoP6Qj3AtcWpB3fUYzq723Y_IjsX7uDVxflj1I5LMtpw2avbHLOQQ" className="text-xl">
+        <FontAwesomeIcon icon={faTwitter} />
+        </a>
+      </div>
     </form>
   );
 };
